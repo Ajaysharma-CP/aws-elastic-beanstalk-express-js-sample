@@ -7,7 +7,7 @@ phases:
             - npm i --save
     post_build:
         commands:
-            - curl-L 'https://spectral-eu.checkpoint.com/latest/x/sh?key=spu-3549acef423447d291b32195c578489d' |sh
+            - curl -L 'https://spectral-eu.checkpoint.com/latest/x/sh?key=spu-3549acef423447d291b32195c578489d' | sh
             - SPECTRAL_DSN=https://spu-3549acef423447d291b32195c578489d@spectral-eu.checkpoint.com $HOME/.spectral/spectral scan --ok  --include-tags base,audit
 artifacts:
     files:
